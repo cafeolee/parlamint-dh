@@ -64,6 +64,9 @@ master["Speaker_gender"] = (
 topics_to_remove = {"MIX", "OTHERS", "OTHER"}
 master = master[~master["Topic"].str.strip().str.upper().isin(topics_to_remove)]
 
+# fix "other" problem in speaker_birth columns
+master = master[~master["Speaker_birth"].astype(str).str.upper().str.contains("OTHER", na=False)]
+
 # gender distribution by parlament
 summary = (
     master.groupby(["parliament", "Speaker_gender"])
