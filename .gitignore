@@ -1,8 +1,7 @@
 /data
-/output
 /pruebas
 
 *.csv
-*.tsv
+
 
 .venv
