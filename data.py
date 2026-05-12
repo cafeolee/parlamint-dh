@@ -52,8 +52,17 @@ master = pd.concat(all_dfs, ignore_index=True)
 print(f"\n{'='*60}")
 print(f"MAIN DATASET: {len(master):,} rows | {len(master.columns)} columns")
 
-# normalize
-master["Speaker_gender"] = master["Speaker_gender"].str.strip().str.upper()
+# Normalize gender: strip, uppercase, then unify '-' and 'U' → 'U'
+master["Speaker_gender"] = (
+    master["Speaker_gender"]
+    .str.strip()
+    .str.upper()
+    .replace("-", "U")
+)
+
+# Filter out 'mix' and 'others' from Topic (case-insensitive)
+topics_to_remove = {"MIX", "OTHERS"}
+master = master[~master["Topic"].str.strip().str.upper().isin(topics_to_remove)]
 
 # gender distribution by parlament
 summary = (
@@ -74,9 +83,9 @@ print(master["Topic"].value_counts().head(20).to_string())
 # save output
 master_path = os.path.join(OUTPUT_DIR, "master_all.tsv")
 master.to_csv(master_path, sep="\t", index=False)
-print(f"\nMain dataset: {master_path}  ({len(master):,} filas)")
+print(f"\nMain dataset: {master_path}  ({len(master):,} rows)")
 
 women = master[master["Speaker_gender"] == "F"]
 women_path = os.path.join(OUTPUT_DIR, "master_women.tsv")
 women.to_csv(women_path, sep="\t", index=False)
-print(f"Only women dataset:  {women_path}  ({len(women):,} filas)")
+print(f"Only women dataset:  {women_path}  ({len(women):,} rows)")
