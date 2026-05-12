@@ -61,7 +61,7 @@ master["Speaker_gender"] = (
 )
 
 # Filter out 'mix' and 'others' from Topic (case-insensitive)
-topics_to_remove = {"MIX", "OTHERS"}
+topics_to_remove = {"MIX", "OTHERS", "OTHER"}
 master = master[~master["Topic"].str.strip().str.upper().isin(topics_to_remove)]
 
 # gender distribution by parlament
