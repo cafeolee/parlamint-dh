@@ -1,9 +1,7 @@
 # The Voices of Women in ParlaMint — Gendered Patterns in Parliamentary Discourse
 
 **Bersun Şipal, Inés Martínez Fernández, Maria Elena López Justiniano**  
-University of the Basque Country (EHU) · Language Analysis and Processing MSc · 2026
 
----
 
 ## Introduction
 
@@ -11,7 +9,6 @@ Parliamentary discourse is one of the most institutionally regulated speech cont
 
 The central question is whether female speakers are systematically associated with specific policy domains, and whether political ideology mediates that relationship. A secondary analysis examines whether women and men employ lexically distinct vocabularies in their speeches. The study builds on prior research suggesting that even as women's parliamentary representation increases, thematic segregation persists — a phenomenon described as "soft exclusion", where women are present in institutions but channeled towards topics traditionally associated with care, welfare, and social rights, while remaining less visible in areas such as defense or foreign affairs (Van der Pol et al., 2021).
 
----
 
 ## Corpus
 
@@ -26,7 +23,6 @@ The analysis uses the 2022 edition of the ParlaMint corpus, a multilingual compa
 
 The proportions of female speeches in the corpus closely mirror the actual share of women elected to each national parliament in 2022, suggesting the corpus is representative of the gender composition of each institution. The Turkish parliament stands out with notably lower female representation (15.4%), consistent with national figures.
 
----
 
 ## Methodology
 
