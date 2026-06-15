@@ -1,4 +1,4 @@
-# The Voices of Women in ParlaMint — Gendered Patterns in Parliamentary Discourse
+# The Voices of Women in ParlaMint
 
 **Bersun Şipal, Inés Martínez Fernández, Maria Elena López Justiniano**  
 
@@ -62,7 +62,7 @@ The four subcorpora differ considerably in size, which may affect the stability 
 parlamint-gender/
 ├── README.md
 ├── data/                  # Preprocessed TSV files 
-├── notebooks/             # Analysis notebooks
+├── notebooks/             # Analysis notebook
 └── figures/               # Topic distribution and keyword plots
 ```
 
