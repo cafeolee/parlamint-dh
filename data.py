@@ -3,8 +3,8 @@ import glob
 import pandas as pd
 
 # Paths 
-DATA_DIR   = "./data"
-OUTPUT_DIR = "./output"
+DATA_DIR   = "./raw"
+OUTPUT_DIR = "./data"
 LANGUAGES  = ["en", "es", "fr", "tr"]
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
